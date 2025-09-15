@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyvanta - Login/Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../LOGIN PAGE/THEME/theme.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="light">
+<div class="maincontainer">
+  <!-- Preloader -->
+  <div id="preloader">
+    <img src="logo.png" alt="Logo">
+    <div class="welcome-text">Where You Meets Simplicity!!</div>
+  </div>
+  
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle" onclick="toggleTheme()">
+    <i class="fas fa-sun"></i>
+    
+    <div class="toggle-dot"></div>
+  </div>
+
+  <div class="container">
+    <div class="left-side">
+      <img src="logo.png" alt="Rocket" class="rocket">
+      <h2 id="typewriter"></h2>
+    </div>
+
+    <div class="right-side">
+      <div class="login-box">
+        <div class="button-box">
+          <button class="toggle-btn active" onclick="showSignIn()">Sign In</button>
+          <button class="toggle-btn" onclick="showSignUp()">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signInForm" action="../DASHBOARD/dashboard.html">
+          <h2>Sign In</h2>
+          <input type="text" placeholder="Username" required>
+          <input type="password" placeholder="Password" required>
+          <a href="../FORGOT PAGE/forgot.html" class="forgot-password">Forgot Password?</a>
+          <button type="submit" class="login-btn">Sign In ➔</button>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signUpForm" action="dashboard.html" style="display: none;">
+          <h2>Sign Up</h2>
+          <input type="text" placeholder="Username" required>
+          <input type="email" placeholder="Email" required>
+          <input type="email" placeholder="Parent Email" required> <!-- Parent Email field -->
+          <input type="password" placeholder="Password" required>
+          <input type="password" placeholder="Confirm Password" required>
+          <button type="submit" class="login-btn">Sign Up ➔</button>
+        </form>
+
+        <div class="social-login">
+          <a href="https://accounts.google.com/o/oauth2/v2/auth?client_id=YOUR_CLIENT_ID.apps.googleusercontent.com&redirect_uri=YOUR_REDIRECT_URI&response_type=token&scope=email"
+            target="_blank"><button class="social-button box1"><i class="fab fa-google"></i></button></a>
+          <a href="https://www.facebook.com/v10.0/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email"
+            target="_blank"><button class="social-button box2"><i class="fab fa-facebook-f"></i></button></a>
+          <a href="https://github.com/login/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=user"
+            target="_blank"><button class="social-button box4"><i class="fab fa-github"></i></button></a>
+          <a href="https://api.twitter.com/oauth/authenticate?oauth_token=YOUR_REQUEST_TOKEN" target="_blank"><button
+              class="social-button box3"><i class="fab fa-twitter"></i></button></a>
+          <a href="https://api.instagram.com/oauth/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=user_profile&response_type=code"
+            target="_blank"><button class="social-button box5"><i class="fab fa-instagram"></i></button></a>
+        </div>
+      </div>
+    </div>
+ 
+
+  </section>
+</div>
+  <script src="script.js"></script>
+  <script src="../LOGIN PAGE/THEME/theme.js"></script>
+
+</body>
+
+</html>
+
+</html>
