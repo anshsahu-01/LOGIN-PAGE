@@ -82,9 +82,10 @@ body {
   justify-content: center;
   padding: 20px 30%;
   transition: background 0.5s, color 0.5s;
-  background: rgb(207, 255, 208);
+  background: linear-gradient(135deg,rgb(77, 77, 251) , rgb(206, 206, 244));
   color: #000000;
   position: relative;
+  overflow-y: hidden;
 }
 
 #typewriter {
@@ -96,7 +97,7 @@ body {
 /* Main container */
 .container {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 1px 2px 22px rgb(0, 17, 255);
+  box-shadow: 1px 2px 22px rgb(111, 50, 255);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 20px;
@@ -131,12 +132,10 @@ body {
 }
 
 .left-side {
-  background: linear-gradient(135deg ,rgb(16, 255, 51) ,rgba(66, 62, 255, 0.774)); /* Refined saffron to green */
+  background: rgba(171, 171, 171, 0.71); /* Refined saffron to green */
   border-right: 2px solid #000000;
   border-radius: 20px;
   text-align: center;
-
- 
 }
 
 
@@ -165,18 +164,15 @@ body {
 }
 
 .toggle-btn{
-  border: 2px solid #ff0000 !important;
-  box-shadow: 2px 2px 20px #ff0000;
   border-radius: 20px;
-  background-color: #403e3e !important;
+  background-color: #ede4e4 ;
+  color: #000;
 }
 
 .toggle-btn:hover{
-  border:2px solid rgb(0, 255, 0) !important;
   border-radius: 20px;
-  box-shadow: 2px 2px 20px #ff71fa;
   transition: 0.3s ease;
-  color:black;
+  background-color: #8a898922;
 }
 
 .toggle-btn active{
@@ -197,8 +193,7 @@ form input {
   border-radius: 10px;
   color: #ffffff;
   font-size: 14px;
-  box-shadow: 1px 1px 10px #ffa94d;
-  border: 2px solid #ef9b25;
+  border: 2px solid black;
   display: block;
   width: 99%; /* Width ko adjust kiya gaya */
   margin: 10px auto; /* Centering using auto margins */
@@ -228,9 +223,7 @@ form a {
 .forgot-password:hover {
   /* transition: transform 4s;
   transform: scale(0.9); */
-  color : #9b4aff;
-  transition: transform 1.0s;
-  transform: scale(1.1);
+  color : #d8d7da;
 }
 
 body.dark .forgot-password:hover{
@@ -245,8 +238,7 @@ body.dark .forgot-password:hover{
   cursor: pointer;
   font-size: 20px;
   margin-bottom: 20px;
-  box-shadow: 2px 2px 30px #df3737;
-  border: 2px solid #ff4a08;
+  border: 2px solid black;
   /* margin-top: 20px; */
   width: 100%; /* Set width to 80% of the container */
   display: block;
@@ -256,10 +248,8 @@ body.dark .forgot-password:hover{
 
 
 .login-btn:hover {
-  box-shadow: 2px 2px 30px #ff71fa;
   transition: 0.4s ease;
   color: #000000;
-  border: 2px solid #01ff0a;
 }
 
 .social-login {

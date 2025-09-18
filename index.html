@@ -6,25 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyvanta - Login/Sign Up</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../LOGIN PAGE/THEME/theme.css">
+  <link rel="stylesheet" href="./THEME/theme.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body class="light">
 <div class="maincontainer">
-  <!-- Preloader -->
-  <div id="preloader">
-    <img src="logo.png" alt="Logo">
-    <div class="welcome-text">Where You Meets Simplicity!!</div>
-  </div>
   
   <!-- Theme Toggle Button -->
-  <div class="theme-toggle" onclick="toggleTheme()">
-    <i class="fas fa-sun"></i>
-    
-    <div class="toggle-dot"></div>
-  </div>
+  <div id="themeToggle" class="theme-toggle" role="button" aria-label="Switch theme" tabindex="0" onclick="toggleTheme()">
+  <!-- Sun (filled) for light mode -->
+  <svg class="icon sun" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="12" y1="1"  x2="12" y2="4"/>
+      <line x1="12" y1="20" x2="12" y2="23"/>
+      <line x1="1"  y1="12" x2="4"  y2="12"/>
+      <line x1="20" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="4.22"  x2="6.34" y2="6.34"/>
+      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+      <line x1="17.66" y1="6.34"  x2="19.78" y2="4.22"/>
+    </g>
+  </svg>
+
+  <!-- Moon (outline) for dark mode -->
+  <svg class="icon moon" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+          fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
 
   <div class="container">
     <div class="left-side">
@@ -40,7 +53,7 @@
         </div>
 
         <!-- Sign In Form -->
-        <form id="signInForm" action="../DASHBOARD/dashboard.html">
+        <form id="signInForm" action="dashboard.html">
           <h2>Sign In</h2>
           <input type="text" placeholder="Username" required>
           <input type="password" placeholder="Password" required>
@@ -53,7 +66,6 @@
           <h2>Sign Up</h2>
           <input type="text" placeholder="Username" required>
           <input type="email" placeholder="Email" required>
-          <input type="email" placeholder="Parent Email" required> <!-- Parent Email field -->
           <input type="password" placeholder="Password" required>
           <input type="password" placeholder="Confirm Password" required>
           <button type="submit" class="login-btn">Sign Up ➔</button>
@@ -78,7 +90,7 @@
   </section>
 </div>
   <script src="script.js"></script>
-  <script src="../LOGIN PAGE/THEME/theme.js"></script>
+  <script src="./THEME/theme.js"></script>
 
 </body>
 

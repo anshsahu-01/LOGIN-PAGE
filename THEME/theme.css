@@ -1,125 +1,45 @@
-@keyframes sunSpinGlow {
-  0% {
-    transform: rotate(0deg);
-    text-shadow: 0 0 5px #fff700, 0 0 10px #fff70080, 0 0 20px #fff70040;
-    opacity: 1;
-  }
-
-  50% {
-    text-shadow: 0 0 2px #fff70040, 0 0 5px #fff70020;
-    opacity: 0.7;
-  }
-
-  100% {
-    transform: rotate(360deg);
-    text-shadow: 0 0 5px #fff700, 0 0 10px #fff70080, 0 0 20px #fff70040;
-    opacity: 1;
-  }
-}
-
-body.light .theme-toggle i.fa-sun {
-  animation: sunSpinGlow 3s linear infinite;
-  transition: all 0.3s ease;
-}
-
-body.light .theme-toggle i.fa-sun:hover {
-  text-shadow: 0 0 15px #fff700cc, 0 0 25px #fff700aa;
-  transform: scale(1.3);
-}
-
-
-@keyframes moonGlow {
-
-  0%,
-  100% {
-    text-shadow: 0 0 10px #fde892, 0 0 20px rgb(223, 211, 133), 0 0 30px #ffde5a;
-    opacity: 1;
-  }
-
-  50% {
-    text-shadow: 0 0 2px #0217ff, 0 0 5px #0088ff20;
-    opacity: 0.9;
-  }
-}
-
-@keyframes dotPulse {
-
-  0%,
-  100% {
-    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff80;
-    opacity: 1;
-  }
-
-  50% {
-    box-shadow: 0 0 2px #ffffff40, 0 0 5px #ffffff20;
-    opacity: 0.7;
-  }
-}
-
-body.dark .toggle-dot {
-  animation: dotPulse 2s ease-in-out infinite;
-  background: #e6ff04;
-}
-
-body.light .toggle-dot {
-  animation: dotPulse 2s ease-in-out infinite;
-  background: #222;
-  /* optional: darker dot for contrast */
-}
-
-
-.theme-toggle i.fa-moon {
-  animation: moonGlow 2s ease-in-out infinite;
-  transition: all 0.3s ease;
-}
-
-
-/* Theme Toggle Button */
 .theme-toggle {
   position: fixed;
-  top: 20px;
+  bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 30px;
-  background: #00000070;
-  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  padding: 0 5px;
+  justify-content: center;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.185);
-  transition: all 0.4s ease;
-  z-index: 1000;
-  border: 2px solid #0000005a;
+  user-select: none;
+  z-index: 9999;   /* Light mode bg */
+  color: #111;                    /* icon color */
+  transition: background .2s, color .2s, box-shadow .2s;
+  border: none; /* border remove */
+}
+.theme-toggle:focus {
+  outline: none;
 }
 
-.theme-toggle i {
-  font-size: 18px;
-  color: #fff700;
-  margin: 32px;
-  transition: color 0.4s;
-}
+.icon { display: block; }
 
-.theme-toggle .toggle-dot {
-  width: 22px;
-  height: 22px;
-  background: rgb(255, 255, 255);
-  border-radius: 50%;
-  position: absolute;
-  left: 4px;
-  transition: left 0.4s ease;
-  border: 2px solid #ffffff;
-  ;
-}
+/* show only sun in light mode */
+.theme-toggle .moon { display: none; }
 
-body.dark {
-  background-color: #090909;
+/* Dark mode button style */
+body.dark-mode .theme-toggle { /* Dark mode bg */
+  color: #ffffff00;                      
+  border: none; /* border remove */
+}
+/* show only moon in dark mode */
+body.dark-mode .theme-toggle .sun { display: none; }
+body.dark-mode .theme-toggle .moon { display:block; }
+
+
+body.dark .theme-toggle {
   color: #ffffff;
 }
 
-body.dark .theme-toggle {
-  background: #efe8e863;
-  border: 2px solid #ffffff6e;
+body.dark .left-side {
+  background: linear-gradient(135deg, rgb(77, 77, 251) , rgb(206, 206, 244)); /* Dark mode bg */
 }
 
 body.dark .forgot-password:hover {
@@ -146,11 +66,6 @@ body.dark .forgot-password {
   transition: 0.3s;
 }
 
-.theme-toggle:hover {
-  transform: scale(1.15) translateZ(15px);
-  box-shadow: 0 0 25px 6px rgb(235, 251, 57);
-  border: 2px solid #ffef08;
-}
 
 .toggle-btn.active {
   background: #000000;
